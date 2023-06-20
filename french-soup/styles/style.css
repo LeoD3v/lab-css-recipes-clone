@@ -1,9 +1,168 @@
 /*Some necessary adjustments*/
-h1, body, html, main {
+h1,
+body,
+html,
+main {
   margin: 0;
 }
 /*Import the font and set the default size*/
 html {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+body {
+  /* margin: 0 auto; */
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 80px;
+  font-weight: normal;
+}
+#dish-img {
+  background-image: url("./../images/soup.jpg");
+  background-size: cover;
+  background-position: bottom right;
+  object-fit: none;
+  /* transform: scale(1); */
+  height: 80vh;
+  margin-bottom: 100px;
+}
+
+.intro-title {
+  color: white;
+  font-size: 8em;
+  text-align: center;
+  padding-top: 320px;
+  font-weight: lighter;
+  letter-spacing: 12px;
+}
+.intro-section {
+  width: 60%;
+  margin: 10px auto;
+  border-bottom: 2px solid black;
+  margin-bottom: 80px;
+}
+section article {
+  font-size: 1.8em;
+  font-weight: lighter;
+  text-align: left;
+  margin-bottom: 80px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* padding: 50px 0; */
+  margin-bottom: 80px;
+}
+/* /////////SECTION INGREDIENTS///////// */
+.section-ingredients {
+  width: 60%;
+  margin: 0 auto;
+  border-bottom: 2px solid black;
+  margin-bottom: 80px;
+}
+
+.ingredient-box > ul {
+  font-size: 1.8em;
+  font-weight: lighter;
+  list-style: none;
+  margin-bottom: 80px;
+}
+.dash::before {
+  content: " - ";
+}
+.icon-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 80px;
+  gap: 10px;
+}
+.right-sidebar {
+  padding-right: 40px;
+  padding-left: 40px;
+  border-right: 3px solid rgba(150, 150, 150, 0.586);
+}
+/* //////////DIRECTIONS////////// */
+
+.section-directions {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.direction-ul {
+  font-size: 1.8em;
+  font-weight: lighter;
+  list-style: none;
+}
+/* why do i have to do this for the counter to work? */
+.direction-ul .direction-li {
+  counter-increment: mycounter;
+}
+/* ////////////////////////// */
+.direction-li:before {
+  content: counter(mycounter, number) ")";
+}
+
+/* //////ICONS//////////// */
+
+.clock,
+.pie,
+.chart {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* //// responsivity ///*/
+
+@media screen and (max-width: 600px) {
+  .intro-title {
+    font-size: 2em;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .intro-article {
+    font-size: 1.1em;
+  }
+  .clock,
+  .pie,
+  .chart {
+    height: 30px;
+  }
+  .icons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5px;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  .right-sidebar {
+    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+  .ingredient-box > ul {
+    font-size: 1.1em;
+  }
+  .directions {
+    text-align: center;
+  }
+  .section-directions {
+    width: 90%;
+  }
+  .section-directions > ul {
+    font-size: 1.1em;
+  }
+}
+@media and {
 }

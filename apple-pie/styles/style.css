@@ -5,11 +5,22 @@ html {
   font-size: 16px;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: lighter;
@@ -18,7 +29,139 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 /*  Set the font */
 body {
   font-family: "Helvetica", sans-serif;
+  line-height: 2.8em;
 }
 
+.bruise-banner {
+  background-image: url("./../images/apple-pie.jpg");
+  background-size: cover;
+
+  height: 80vh;
+}
+#bruise-banner-title {
+  font-size: 8em;
+  color: white;
+  text-align: center;
+  padding-top: 425px;
+  letter-spacing: 24px;
+}
 /* STYLES */
 /* Write your CSS below */
+
+/* //////////SECTION DESCRIPTIOIN////////// */
+.description-box {
+  margin: 80px auto;
+  width: 60%;
+  border-bottom: 1.5px solid black;
+}
+.description-text {
+  text-align: justify;
+
+  margin: 0 auto;
+  width: 100%;
+  font-size: 1.8em;
+  display: flex;
+  margin-bottom: 40px;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 60px 60px;
+  gap: 20px;
+}
+.right-sidebar {
+  padding-right: 40px;
+  padding-left: 40px;
+  border-right: 3px solid rgba(150, 150, 150, 0.586);
+}
+.icons-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 60px 60px;
+  gap: 20px;
+}
+.flex-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+}
+/* //////////////SECTION INGREDIENTS///////// */
+
+.ingredients-box {
+  margin: 0 auto;
+  width: 60%;
+  display: flex;
+
+  margin-bottom: 40px;
+  flex-direction: column;
+  border-bottom: 1.5px solid black;
+}
+.ingredients-text {
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.ingredients-text > ul {
+  font-size: 1.8em;
+}
+.ingridient-list {
+  list-style-type: none;
+}
+.dash::before {
+  content: " - ";
+}
+/* //////////////SECTION DIRECTION /////////*/
+
+.directions-box {
+  width: 60%;
+  margin: 40px auto;
+}
+.directions-text {
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.directions-text .list-directions {
+  list-style: none;
+  text-align: left;
+  counter-increment: mycounter;
+
+  width: 100%;
+}
+.list-directions:before {
+  content: counter(mycounter, number) ")";
+}
+.title {
+  font-size: 1.8em;
+  margin-bottom: 80px;
+  font-weight: normal;
+}
+
+/* ///////icons///////// */
+.clock-icon {
+  height: 60px;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+.pie-icon {
+  height: 60px;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+.bar-icon {
+  height: 60px;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
